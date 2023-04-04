@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}
+Check Out
+{% endblock title %}
+{% block content %}
+
+{% endblock content %}
+{% block body %}
+{% load static %}
+
+
+
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        {% for i in allProds %}
+        <div class="row justify-content-center ">
+            <div class="col-md-12 col-xl-10">
+                <div class="card bg-white shadow-0 border rounded-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                                    <a href="/product/{{i.id}}">
+                                        <img src="/media/{{i.image}}" style="background: #F7F8F8;" class="card-img-top"
+                                            alt="not found" height="200px" width="150px" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                <h5 class="card-title text-blaack mt-2" id="namepr{{i.id}}">
+                                    <a href="/product/{{i.id}}">
+                                        {{i.product_name}}
+                                    </a>
+                                </h5>
+                                <p class=" mb-4 mb-md-0">
+                                    {{i.short_desc}}
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                <div class="d-flex flex-row align-items-center mb-1">
+                                    <h6 class="card-title mt-3 mb-3">
+                                        Price:<span id="pricepr{{i.id}}">{{i.price}}</span> ₹
+                                    </h6>
+                                </div>
+                                <h6 class="text-success">Free shipping</h6>
+                                <div class="d-flex flex-column mt-4">
+                                    <span id="divpr{{i.id}}" class="divpr">
+                                        <button id="pr{{i.id}}" class="btn btn-danger cart btn-sm mt-0">
+                                            Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+{% endblock body %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}reset password{% endblock title %}
+{% block content %}
+
+<div class="content" style="margin-top: 100px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://preview.colorlib.com/theme/bootstrap/login-form-07/images/undraw_remotely_2j6y.svg"
+          alt="Image" class="img-fluid">
+      </div>
+      <div class="col-md-6 contents pt-16">
+        <div class="row justify-content-center">
+          <div class="col-md-8 bg-white p-4">
+            <div class="mb-4 text-black">
+              <h3 class="text-dark">Forgot Password</h3>
+              <p class="text-muted" style="font-size: 12px;">To reset your password, enter the email address that you used to set up your eComm account. We'll send
+                you a link to help you get back into your account.</p>
+            </div>
+            {% for message in messages %}
+
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+              <strong>{{message}}</strong>
+              <button  type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+
+
+
+
+            <form action="/auth/request-reset-email/" method="post">
+              {% csrf_token %}
+              <br />
+
+              <label for="email">Email</label>
+              <div class="form-group">
+                <input type="email" class="form-control p-2" id="email" name="email" required />
+              </div>
+              <br>
+              <div style="padding-top: 10px;" class="g-recaptcha" id="gcaptcha" name="gcaptcha"
+                data-sitekey="6LebpS8lAAAAABJ5oMgL_UaOc8Bc1JvhsiBIpno8"></div>
+              <br />
+              <button  style="width: 100%;"  type="submit" class="btn btn-dark">Submit</button>
+
+              <br />
+              <br />
+              <a style="margin-top: 8px;" href="/">Go Back</a>
+              <br />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

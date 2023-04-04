@@ -1,0 +1,7 @@
+RAZORPAY_KEY_ID ="rzp_test_TtAKcc8nqf5IJM"
+RAZORPAY_KEY_SECRET ="Xzgcmwc1LIMBsLdr7ZCvsQ3j"
+SUCCESS = "Success" 
+FAILURE = "Failure"
+PENDING = "Pending"
+DOMAIN="https://ecomm-nayan.azurewebsites.net"
+EMAIL_HOST_USER="my.smtp@outlook.in"

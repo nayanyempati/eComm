@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Profile Page{% endblock title %}
+{% block body %}
+{% load static %}
+
+<div class="container" style="padding-top: 100px;">
+
+    <div class="container-fliud" style="padding: 30px;">
+        <div class="wrapper row">
+            {% if allProds %}
+            {% for i in allProds %}
+            {% if not i.product_name %}
+            <p>No data</p>
+            {% endif %}
+            <div class="col-md-3 mt-3">
+                <a href="/product/{{i.id}}">
+                    <img src="/media/{{i.image}}" class="card-img-top" height="200px" width="150px" />
+                </a>
+
+                <div class="card-body">
+                    <h5 class="card-title text-blaack mt-2" id="namepr{{i.id}}">
+                        <a href="/product/{{i.id}}">
+                            {{i.product_name}}
+                        </a>
+                    </h5>
+                    <h6 class="card-title mt-3 mb-3">
+                        Price:<span id="pricepr{{i.id}}">{{i.price}}</span> ₹
+                    </h6>
+                    <span id="divpr{{i.id}}" class="divpr">
+                        <button id="pr{{i.id}}" class="btn btn-danger cart btn-sm mt-0">
+                            Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </span>
+
+                    <a href="/media/{{i.image}}">
+                        <button class="btn btn-dark btn-sm cart"><i class="fa-solid fa-eye"></i></button></a>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% else %}
+            <p>No items found for search.</p>
+            {% endif %}
+
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock body %}
