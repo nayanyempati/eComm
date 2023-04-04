@@ -41,7 +41,6 @@ INSTALLED_APPS = [
      
     'adminAuth',
     'app',
-    'captcha',
     'social_django', 
 
 ]
