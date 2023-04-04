@@ -195,7 +195,7 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 )
-
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 SOCIAL_AUTH_FACEBOOK_KEY = '182074517955094'
 SOCIAL_AUTH_FACEBOOK_SECRET = '99169cd4a4b473a4a00c209cd928f0ce'
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
