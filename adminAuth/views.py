@@ -18,8 +18,6 @@ from django.core.mail import EmailMultiAlternatives
 from django.core.mail import send_mail
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.contrib.auth import authenticate,login,logout
-from captcha.fields import ReCaptchaField
-from captcha.widgets import ReCaptchaV2Checkbox
 
 # Create your views here.
 def signup(request):
