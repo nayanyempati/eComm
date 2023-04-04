@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nz82h)of#q)cdh0&7%q1acvny$bgwqh)&b*rc%(g@kf$+zmmz)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['ecomm-nayan.azurewebsites.net','localhost']
 
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     
     'adminAuth',
     'app',
     'social_django', 
@@ -152,7 +151,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 STATIC_URL = '/static/'
-
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
