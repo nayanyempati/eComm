@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'eComm-nayan'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B526026F3627421BA664ECBF20D66D0B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0B6E45F5447A400AB5D0B7B960C925B2 }}
