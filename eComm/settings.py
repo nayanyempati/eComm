@@ -13,10 +13,12 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from django.contrib import messages
+import mimetypes
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+mimetypes.add_type("text/css", ".css", True)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -52,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
 
 ]
@@ -109,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CSRF_TRUSTED_ORIGINS = ['https://ecomm-nayan.azurewebsites.net']
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -192,9 +195,9 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 )
-
-SOCIAL_AUTH_FACEBOOK_KEY = '182074517955094'
-SOCIAL_AUTH_FACEBOOK_SECRET = '99169cd4a4b473a4a00c209cd928f0ce'
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+SOCIAL_AUTH_FACEBOOK_KEY = '227970523228438'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'cd4e76763e3a2630b6cc5160292960c3'
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
             'fields': 'id,name,email',
