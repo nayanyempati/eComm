@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-nz82h)of#q)cdh0&7%q1acvny$bgwqh)&b*rc%(g@kf$+zmmz)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecomm-nayan.azurewebsites.net','localhost']
+ALLOWED_HOSTS = ['https://ecomm-nayan.azurewebsites.net','localhost']
 
 
 # Application definition
