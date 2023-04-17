@@ -149,14 +149,7 @@ DOMAIN = "http://localhost:8000/"
 RECAPTCHA_PUBLIC_KEY = '6LebpS8lAAAAABJ5oMgL_UaOc8Bc1JvhsiBIpno8'
 RECAPTCHA_PRIVATE_KEY = '6LebpS8lAAAAACYMhiQFGsTyPCYSabOG__Shyv7v'
 
-# Email SMTP Server Details
-DEFAULT_FROM_EMAIL = 'my.smtp@outlook.in'
-EMAIL_HOST = 'smtp.office365.com'
-EMAIL_HOST_USER = 'my.smtp@outlook.in'
-EMAIL_HOST_PASSWORD = 'wdkquyhamrcykwls'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 
 AUTHENTICATION_BACKENDS = (
